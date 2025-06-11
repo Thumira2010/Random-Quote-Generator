@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Savate:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f857a6, #ff5858);
+  transition: background 0.5s ease-in-out;
+  
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  min-width: 300px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.quote-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px; 
+  padding: 40px 20px;
+}
+.quote-box p {
+  margin: 0;
+}
+#quote {
+  font-size: 1.7rem;
+  transition: opacity 0.5s;
+  min-height: 100px;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  line-height: 45px;
+  word-break: break-word;
+
+}
+#quote::before {
+  content: "'";
+  font-size: 5rem;
+  margin-right: 6px;
+  color: #fff;
+  font-weight: 600px;
+}
+
+#author {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+  min-height: 30px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100px;
+  font-style: normal;
+}
+
+#new-quote {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #f857a6;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#new-quote:hover {
+  transform: scale(1.05);
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Mobile Version */
+@media (max-width: 600px) {
+  .quote-box{
+    gap: 5px;
+    padding: 10px 5px;
+  }
+  #quote {
+    font-size: 1.3rem;
+      line-height: 35px;
+  }
+  #author {
+    font-size: 1.1rem;
+  }
+    .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons button {
+    width: 100%;
+    min-width: 250px;
+  }
+}

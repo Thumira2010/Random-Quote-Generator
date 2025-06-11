@@ -26,7 +26,3 @@ This is a dynamic quote generator that displays a collection of motivational and
 
 - Add more quotes to the `quotes` array in `script.js`.
 - Add new background gradients to the `gradients` array.
-
-## License
-
-MIT — free to use, modify, and share.
